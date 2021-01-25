@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style type="text/css">
+    	.main-image{
+    		width: 279px;
+    		height:318px;
+    		margin: 200px auto;
+    		position: relative;
+    	}
+
+    	.left-eye, .right-eye {
+    		width: 20px;
+    		height: 20px;
+    		position: absolute;
+    	}
+
+    	.left-eye{
+		    left: 80px;
+    		top: 95px;
+		}
+
+		.right-eye {
+		    left: 136px;
+    		top: 127px;
+		}
+    	
+    </style>
+  </head>
+  <body>
+	   
+
+	  	<div class="main-image">
+	  		<img src="chips.jpeg">
+	  		<div onmouseover="PlaySound('mySound15')" onmouseout="StopSound('mySound15')" class="left-eye"></div>
+	  		<div onmouseover="PlaySound('mySound16')" onmouseout="StopSound('mySound16')" class="right-eye"></div>
+	  	</div>
+	  	 <audio id='mySound15' src="sound15.wav" />
+	    <audio id='mySound16' src="sound16.wav" />
+
+	  	<script type="text/javascript">
+	  		function PlaySound(soundobj) {
+	  			debugger;
+			    var thissound=document.getElementById(soundobj);
+			    thissound.play();
+			}
+
+			function StopSound(soundobj) {
+				debugger;
+			    var thissound=document.getElementById(soundobj);
+			    thissound.pause();
+			    thissound.currentTime = 0;
+			}
+	  	</script>
+  
+  </body>
+</html>

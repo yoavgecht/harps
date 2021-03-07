@@ -4,41 +4,127 @@
     <meta charset="UTF-8">
     <title>title</title>
     <style type="text/css">
+    	.allow-sound-btn {
+    		width: 591px;
+    		height: 20px;
+    		margin-bottom: 1px
+    	}
     	.main-image{
-    		width: 279px;
-    		height:318px;
+    		width: 591px;
+    		height:800px;
     		margin: 200px auto;
     		position: relative;
     	}
 
-    	.left-eye, .right-eye {
-    		width: 20px;
-    		height: 20px;
-    		position: absolute;
+    	.string {
+    		 position: absolute;
+    		-webkit-transform: skewX(30deg);
+    		-ms-transform: skewX(30deg);
+    		cursor:pointer;
+    		width: 5px;
     	}
 
-    	.left-eye{
-		    left: 80px;
-    		top: 95px;
-		}
+    	.string1 {
+		    height: 439px;
+    		top: 197px;
+    		right: 341px;
+    		transform: skewX(14deg);
+    		
+    	}
 
-		.right-eye {
-		    left: 136px;
-    		top: 127px;
-		}
-    	
+    	.string2 {
+		    height: 373px;
+		    width: 5px;
+		    position: absolute;
+		    top: 211px;
+		    right: 312px;
+    		transform: skewX(14deg);
+    		cursor: pointer;
+    	}
+
+    	.string3 {
+		    height: 321px;
+		    top: 236px;
+		    right: 288px;
+		    transform: skewX(13deg);
+    	}
+
+    	.string4 {
+		    height: 276px;
+		    top: 236px;
+		    right: 268px;
+    		transform: skewX(13deg);
+    	}
+
+    	.string5 {
+		    height: 242px;
+		    top: 238px;
+		    right: 249px;
+		    transform: skewX(13deg);
+    	}
+
+    	.string6 {
+    		height: 201px;
+		    top: 239px;
+		    right: 232px;
+		    transform: skewX(13deg);
+    	}
+
+    	.string7 {
+		    height: 164px;
+		    top: 243px;
+		    right: 214px;
+		    transform: skewX(14deg);
+    	}
+
+    	.string8 {
+		    height: 139px;
+		    top: 240px;
+		    right: 199px;
+		    transform: skewX(14deg);
+    	}
+
+    	.string9 {
+		    height: 121px;
+    		top: 237px;
+    		right: 185px;
+   			transform: skewX(14deg);
+    	}
+
+    	.string10 {
+		    height: 96px;
+		    top: 231px;
+		    right: 171px;
+    		transform: skewX(16deg);
+    	}
+
     </style>
   </head>
   <body>
-	   
-
 	  	<div class="main-image">
-	  		<img src="chips.jpeg">
-	  		<div onmouseover="PlaySound('mySound15')" onmouseout="StopSound('mySound15')" class="left-eye"></div>
-	  		<div onmouseover="PlaySound('mySound16')" onmouseout="StopSound('mySound16')" class="right-eye"></div>
+	  		<button class="allow-sound-btn">Click here to allow sound</button>
+	  		<img src="atara-string.jpg">
+	  		<div onmouseover="PlaySound('string01')" onmouseout="StopSound('string01')" class="string string1"></div>
+	  		<div onmouseover="PlaySound('string02')" onmouseout="StopSound('string02')" class="string string2"></div>
+	  		<div onmouseover="PlaySound('string03')" onmouseout="StopSound('string03')" class="string string3"></div>
+	  		<div onmouseover="PlaySound('string04')" onmouseout="StopSound('string04')" class="string string4"></div>
+	  		<div onmouseover="PlaySound('string05')" onmouseout="StopSound('string05')" class="string string5"></div>
+	  		<div onmouseover="PlaySound('string06')" onmouseout="StopSound('string06')" class="string string6"></div>
+	  		<div onmouseover="PlaySound('string07')" onmouseout="StopSound('string07')" class="string string7"></div>
+	  		<div onmouseover="PlaySound('string08')" onmouseout="StopSound('string08')" class="string string8"></div>
+	  		<div onmouseover="PlaySound('string09')" onmouseout="StopSound('string09')" class="string string9"></div>
+	  		<div onmouseover="PlaySound('string10')" onmouseout="StopSound('string10')" class="string string10"></div>
 	  	</div>
-	  	 <audio id='mySound15' autoplay="false" src="sound15.wav" />
-	     <audio id='mySound16' autoplay="false" src="sound16.wav" />
+	  	 <audio id='string01' autoplay="false" src="String01.wav" />
+	     <audio id='string02' autoplay="false" src="String02.wav" />
+	     <audio id='string03' autoplay="false" src="String03.wav" />
+	     <audio id='string04' autoplay="false" src="String04.wav" />
+	     <audio id='string05' autoplay="false" src="String05.wav" />
+	     <audio id='string06' autoplay="false" src="String06.wav" />
+	     <audio id='string07' autoplay="false" src="String07.wav" />
+	     <audio id='string08' autoplay="false" src="String08.wav" />
+	     <audio id='string09' autoplay="false" src="String09.wav" />
+	     <audio id='string10' autoplay="false" src="String10.wav" />
 
 	  	<script type="text/javascript">
 	  		function PlaySound(soundobj) {
